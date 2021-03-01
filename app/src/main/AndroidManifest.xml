@@ -24,9 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RestaurantDetailActivity"/>
-        <activity android:name=".FoodOrderActivity"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
-        </activity>
+        <activity android:name=".FoodOrderActivity"/>
         <activity android:name=".PlaceOrderActivity"/>
         <activity android:name=".MapActivity"/>
         <service

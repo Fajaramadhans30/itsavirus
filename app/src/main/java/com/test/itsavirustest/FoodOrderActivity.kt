@@ -16,7 +16,7 @@ import androidx.databinding.DataBindingUtil
 import com.test.itsavirustest.databinding.OrderFoodBinding
 
 
-class FoodOrderActivity : Activity() {
+class FoodOrderActivity : AppCompatActivity() {
     private lateinit var binding: OrderFoodBinding
     var minteger = 0
 
@@ -30,6 +30,7 @@ class FoodOrderActivity : Activity() {
         val price :String = (priceDouble?.times(1000)).toString()
 
         Log.d("REAL PRICE ", "onCreate: $price")
+        supportActionBar?.title = "Order your food"
 
         binding.btnClose.setOnClickListener {
             onBackPressed()
