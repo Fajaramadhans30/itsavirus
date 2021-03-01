@@ -1,5 +1,8 @@
 # itsavirus
 
+# Screenshoot
+![Alt text](/relative/path/to/https://user-images.githubusercontent.com/16092646/109509831-e692ca80-7ad3-11eb-8b93-a063dbe5b43f.png?raw=true "Screenshoot 1")
+
 Foodie App
 Application to order food around you easily and quickly
 
