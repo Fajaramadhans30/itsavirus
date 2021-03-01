@@ -1,4 +1,4 @@
-package com.test.itsavirustest.util.custom
+package com.test.itsavirustest.util.custom_map
 
 import android.content.Context
 import android.graphics.Typeface

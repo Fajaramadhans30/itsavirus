@@ -1,8 +1,8 @@
-package com.test.itsavirustest.util.custom
+package com.test.itsavirustest.util.custom_map
 
 import android.content.Context
 import android.util.AttributeSet
-import com.test.itsavirustest.util.custom.FontCache.getTypeface
+import com.test.itsavirustest.util.custom_map.FontCache.getTypeface
 
 class CustomTextView : androidx.appcompat.widget.AppCompatTextView {
     constructor(context: Context) : super(context) {

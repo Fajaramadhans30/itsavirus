@@ -1,4 +1,4 @@
-package com.test.itsavirustest.util.custom
+package com.test.itsavirustest.util.custom_map
 
 interface SimplePlacePicker {
     companion object {

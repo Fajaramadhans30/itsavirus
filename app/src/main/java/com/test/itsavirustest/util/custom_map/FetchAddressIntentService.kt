@@ -1,4 +1,4 @@
-package com.test.itsavirustest.util.custom
+package com.test.itsavirustest.util.custom_map
 
 import android.app.IntentService
 import android.content.Intent
