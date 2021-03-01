@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">itsavirus test</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="current_location">Current Location</string>
+    <string name="street_name">Find your location</string>
+    <string name="search">What are you craving ?</string>
+    <string name="filter">Filter</string>
+    <string name="nearby">Nearby</string>
+    <string name="popular">Popular</string>
+    <string name="image_for_content_error">Please Check Your Connection</string>
+    <string name="intent_id">id</string>
+    <string name="intent_restaurant_name">name</string>
+    <string name="intent_restaurant_latitude">latitude</string>
+    <string name="intent_restaurant_longitude">longitude</string>
+    <string name="intent_restaurant_balance">balance</string>
+    <string name="food_name">Food Name</string>
+    <string name="desc_food">Food Description</string>
+    <string name="initial_count">0</string>
+    <string name="add_to_basket">Add to basket</string>
+    <string name="price">Price</string>
+    <string name="intent_price">price</string>
+    <string name="view_basket">View Basket</string>
+    <string name="please_input">please enter the quantity ordered</string>
+    <string name="deliver_to">Deliver to</string>
+    <string name="order_summary">Order summary</string>
+    <string name="edit">Edit</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="delivery_fee">Delivery fee</string>
+    <string name="payment_detail">Payment detail</string>
+    <string name="cash">Cash</string>
+    <string name="total">Total</string>
+    <string name="place_order">Place Order</string>
+    <string name="my_order">My Order</string>
+    <string name="my_account">Account</string>
+    <string name="search_by_dish">Search by dish</string>
+    <string name="search_by_restaurant">Search by restaurant</string>
+    <string name="search_by">Search by</string>
+
+    <!--MAPS-->
+
+    <string name="service_not_available">Service not available ..check network connection</string>
+    <string name="no_address_found">No address found</string>
+    <string name="address_found">address found</string>
+    <string name="not_support_area">This area is not supported yet</string>
+    <string name="confirm_location">Confirm Location</string>
+    <string name="search_place">Search a place</string>
+    <string name="confirm_pickup">Confirm pickup</string>
+    <string name="confirm_dest">Confirm destination</string>
+    <string name="failed_select_location">failed to select location please try again</string>
+    <string name="google_maps_key"
+        templateMergeStrategy="preserve" translatable="false">AIzaSyCDGsZkq76sM7DnXhfywMmCbtwhBBYAm8E</string> </resources>
