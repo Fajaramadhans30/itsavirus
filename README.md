@@ -1,8 +1,7 @@
 # itsavirus
 
-# Screenshoot
-<img src="https://user-images.githubusercontent.com/16092646/109510533-b4359d00-7ad4-11eb-8020-a9eb0ac98f68.png" width="200" height="400" />
-<img src="https://user-images.githubusercontent.com/16092646/109511320-80a74280-7ad5-11eb-9734-3a4cf0dab7f0.png" width="200" height="400" />
+# Screenshot
+<img src="https://user-images.githubusercontent.com/16092646/109510533-b4359d00-7ad4-11eb-8020-a9eb0ac98f68.png" width="200" height="400" /> <img src="https://user-images.githubusercontent.com/16092646/109511320-80a74280-7ad5-11eb-9734-3a4cf0dab7f0.png" width="200" height="400" />
 
 
 
