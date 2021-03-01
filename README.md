@@ -1,7 +1,8 @@
 # itsavirus
 
 # Screenshoot
-![image](https://user-images.githubusercontent.com/16092646/109510533-b4359d00-7ad4-11eb-8020-a9eb0ac98f68.png
+![Alt text](https://user-images.githubusercontent.com/16092646/109510533-b4359d00-7ad4-11eb-8020-a9eb0ac98f68.png "Optional title")
+
 
 Foodie App
 Application to order food around you easily and quickly
