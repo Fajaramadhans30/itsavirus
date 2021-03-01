@@ -50,4 +50,8 @@
     <string name="confirm_dest">Confirm destination</string>
     <string name="failed_select_location">failed to select location please try again</string>
     <string name="google_maps_key"
-        templateMergeStrategy="preserve" translatable="false">AIzaSyCDGsZkq76sM7DnXhfywMmCbtwhBBYAm8E</string> </resources>
+        templateMergeStrategy="preserve" translatable="false">AIzaSyCDGsZkq76sM7DnXhfywMmCbtwhBBYAm8E</string>
+    <string name="find_your_location">Find your location</string>
+    <string name="intent_distance">Distance from you 0.5 km</string>
+    <string name="recent">Recent</string>
+</resources>

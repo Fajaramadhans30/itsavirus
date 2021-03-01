@@ -1,4 +1,4 @@
-package com.test.itsavirustest.ui.dashboard
+package com.test.itsavirustest.ui.account
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,26 +10,26 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.test.itsavirustest.R
 
-class MyOrderFragment : Fragment() {
+class AccountFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: MyOrderViewModel
+    private lateinit var notificationsViewModel: AccountViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProvider(this).get(MyOrderViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        notificationsViewModel =
+                ViewModelProvider(this).get(AccountViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
+        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
     }
 
     companion object {
-        fun newInstance(): MyOrderFragment = newInstance()
+        fun newInstance(): AccountFragment = newInstance()
     }
 }

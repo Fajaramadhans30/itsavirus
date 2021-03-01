@@ -88,7 +88,7 @@
                     android:layout_marginLeft="8dp"
                     android:visibility="gone" />
 
-                <com.test.itsavirustest.util.custom.CustomTextView
+                <com.test.itsavirustest.util.custom_map.CustomTextView
                     android:id="@+id/tv_display_marker_location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
             </LinearLayout>
 
 
-            <com.test.itsavirustest.util.custom.CustomButton
+            <com.test.itsavirustest.util.custom_map.CustomButton
                 android:id="@+id/submit_location_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

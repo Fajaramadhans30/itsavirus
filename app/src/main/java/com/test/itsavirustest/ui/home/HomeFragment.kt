@@ -25,6 +25,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
+import androidx.core.view.size
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -42,11 +43,11 @@ import com.test.itsavirustest.databinding.FragmentHome2Binding
 import com.test.itsavirustest.model.RestaurantModel
 import com.test.itsavirustest.network.RestaurantProvider
 import com.test.itsavirustest.ui.adapter.RestaurantAdapter
-import com.test.itsavirustest.util.custom.SimplePlacePicker
 import com.test.itsavirustest.viewmodel.RestaurantViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.fragment_home_2.*
 import java.util.*
 
 
@@ -78,8 +79,8 @@ class HomeFragment : Fragment() {
 
     var searchOption: String = ""
 
-    val latitude :Double = 0.0
-    val longitude :Double = 0.0
+    val latitude: Double = 0.0
+    val longitude: Double = 0.0
 
 
     @SuppressLint("UseRequireInsteadOfGet")
@@ -193,7 +194,7 @@ class HomeFragment : Fragment() {
         }
 
         try {
-            val message = arguments?.getString(SimplePlacePicker.SELECTED_ADDRESS)
+            val message = arguments?.getString("data_alamat")
             if (message != null) {
                 Log.d("INI ALAMATNYAAA", "onViewCreated: $message")
 
@@ -207,15 +208,12 @@ class HomeFragment : Fragment() {
     }
 
 
-
+    @SuppressLint("SetTextI18n")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        val strtext2 : String = data?.extras?.getString("data_alamat").toString()
-        Log.d("PLISSS DAPAT22222", "onActivityResult: $strtext2")
         if (resultCode == Activity.RESULT_OK) {
-            val strtext : String = data?.extras?.getString("data_alamat").toString()
-            Log.d("PLISSS DAPAT", "onActivityResult: $strtext")
-
+            val mapAddress: String = data?.extras?.getString("data_alamat").toString()
+            Log.d(TAG, "onActivityResult: $mapAddress")
 
         }
     }
@@ -249,8 +247,14 @@ class HomeFragment : Fragment() {
             }
             dialogInterface.dismiss()
 
-            Log.d("CHOOSE SEARCH", "openSearchOption: $searchOption")
+            if (chipGroupSearch.size > 1) {
+                binding.chipGroupSearch.removeView(chip as View)
+                Toast.makeText(context, "Please remove chips before", Toast.LENGTH_SHORT).show()
+            }
 
+            Log.d("CHOOSE SEARCH", "openSearchOption: $searchOption")
+            Log.d("CHOOSE SEARCH 222", "openSearchOption: $chip")
+            Log.d(TAG, "openSearchOption: " + chip.text)
         }
 
 
@@ -646,6 +650,7 @@ class HomeFragment : Fragment() {
 
     companion object {
         fun newInstance(): HomeFragment = HomeFragment()
+        private const val TAG = "HomeFragment"
     }
 
 }

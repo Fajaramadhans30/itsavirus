@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.text.Html
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -15,7 +16,7 @@ import androidx.databinding.DataBindingUtil
 import com.test.itsavirustest.databinding.OrderFoodBinding
 
 
-class FoodOrderActivity : AppCompatActivity() {
+class FoodOrderActivity : Activity() {
     private lateinit var binding: OrderFoodBinding
     var minteger = 0
 
@@ -30,10 +31,9 @@ class FoodOrderActivity : AppCompatActivity() {
 
         Log.d("REAL PRICE ", "onCreate: $price")
 
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(intent.getStringExtra(getString(R.string.intent_restaurant_name)))
-        supportActionBar?.setSubtitle(Html.fromHtml("<font color='#FFBF00'>Distance from you 0.5 km</font>"))
-//        supportActionBar?.setSubtitle(Html.fromHtml("<font color='#FFBF00'>Here ActionBar Subtitle</font>"))
+        binding.btnClose.setOnClickListener {
+            onBackPressed()
+        }
 
         binding.tvPrice.text = price
 
@@ -107,16 +107,28 @@ class FoodOrderActivity : AppCompatActivity() {
             builder.show()
     }
 
-    private var doubleBackToExitPressedOnce = false
-    override fun onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed()
-            return
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
         }
 
-        this.doubleBackToExitPressedOnce = true
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
+    }
 
-        Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
+//    private var doubleBackToExitPressedOnce = false
+    override fun onBackPressed() {
+//        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+//        }
+
+//        this.doubleBackToExitPressedOnce = true
+//        Toast.makeText(this, "Please click BACK again", Toast.LENGTH_SHORT).show()
+
+//        Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 2000)
     }
 }

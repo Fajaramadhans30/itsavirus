@@ -6,9 +6,9 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.test.itsavirustest.ui.dashboard.MyOrderFragment
+import com.test.itsavirustest.ui.myorder.MyOrderFragment
 import com.test.itsavirustest.ui.home.HomeFragment
-import com.test.itsavirustest.ui.notifications.NotificationsFragment
+import com.test.itsavirustest.ui.account.AccountFragment
 
 class MainActivity2 : AppCompatActivity() {
     lateinit var toolbar: ActionBar
@@ -40,7 +40,7 @@ class MainActivity2 : AppCompatActivity() {
                 }
                 R.id.navigation_account -> {
                     toolbar.title = "Cart"
-                    val cartFragment = NotificationsFragment.newInstance()
+                    val cartFragment = AccountFragment.newInstance()
                     openFragment(cartFragment)
                     return@OnNavigationItemSelectedListener true
                 }

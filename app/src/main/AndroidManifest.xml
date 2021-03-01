@@ -24,11 +24,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".RestaurantDetailActivity"/>
-        <activity android:name=".FoodOrderActivity"/>
+        <activity android:name=".FoodOrderActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+        </activity>
         <activity android:name=".PlaceOrderActivity"/>
         <activity android:name=".MapActivity"/>
         <service
-            android:name=".util.custom.FetchAddressIntentService"
+            android:name=".util.custom_map.FetchAddressIntentService"
             android:exported="false" />
 
         <meta-data

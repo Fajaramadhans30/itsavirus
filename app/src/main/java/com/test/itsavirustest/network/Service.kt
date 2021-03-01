@@ -12,6 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
 import java.sql.Timestamp
+import java.util.concurrent.TimeUnit
 
 
 interface Service {
@@ -58,6 +59,9 @@ interface Service {
             logging.apply { logging.level = HttpLoggingInterceptor.Level.BODY }
 
             val httpClient = OkHttpClient.Builder()
+                .connectTimeout(1, TimeUnit.MINUTES)
+                .readTimeout(30, TimeUnit.SECONDS)
+                .writeTimeout(15, TimeUnit.SECONDS)
                 .addInterceptor(BasicAuthInterceptor("1", "hungry12345678"))
             // add logging as last interceptor
             httpClient.addInterceptor(logging)

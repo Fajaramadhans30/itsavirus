@@ -22,7 +22,6 @@ import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.ResolvableApiException
@@ -44,10 +43,10 @@ import com.mancj.materialsearchbar.MaterialSearchBar.OnSearchActionListener
 import com.mancj.materialsearchbar.adapter.SuggestionsAdapter
 import com.skyfishjy.library.RippleBackground
 import com.test.itsavirustest.ui.home.HomeFragment
-import com.test.itsavirustest.util.custom.CustomButton
-import com.test.itsavirustest.util.custom.CustomTextView
-import com.test.itsavirustest.util.custom.FetchAddressIntentService
-import com.test.itsavirustest.util.custom.SimplePlacePicker
+import com.test.itsavirustest.util.custom_map.CustomButton
+import com.test.itsavirustest.util.custom_map.CustomTextView
+import com.test.itsavirustest.util.custom_map.FetchAddressIntentService
+import com.test.itsavirustest.util.custom_map.SimplePlacePicker
 import java.util.*
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -91,6 +90,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
         initMapsAndPlaces()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(intent.getStringExtra(getString(R.string.find_your_location)))
 
     }
 
@@ -281,16 +281,21 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
             data.putExtra("data_alamat", addressOutput)
             data.putExtra(SimplePlacePicker.LOCATION_LAT_EXTRA, currentMarkerPosition?.latitude)
             data.putExtra(SimplePlacePicker.LOCATION_LNG_EXTRA, currentMarkerPosition?.longitude)
+
+            val mapAdress = intent.extras?.getString("data_alamat")
+
             setResult(Activity.RESULT_OK, data)
 
 //            Log.d(TAG, "submitResultLocation: $addressOutput")
 //            val bundle = Bundle()
 //            bundle.putString(SimplePlacePicker.SELECTED_ADDRESS, addressOutput)
 //            // set Fragmentclass Arguments
-//
 //            Log.d(TAG, "submitResultLocation 22222: $bundle")
-//            val fragobj = HomeFragment()
-//            fragobj.arguments = bundle
+            val fragobj = HomeFragment()
+
+            val bundle = Bundle()
+            bundle.putString("data_alamat", mapAdress)
+            fragobj.arguments = bundle
 
             finish()
         }

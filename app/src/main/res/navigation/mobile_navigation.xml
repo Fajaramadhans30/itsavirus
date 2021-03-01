@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_myorder"
-        android:name="com.test.itsavirustest.ui.dashboard.MyOrderFragment"
+        android:name="com.test.itsavirustest.ui.myorder.MyOrderFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_myorder" />
 
     <fragment
         android:id="@+id/navigation_account"
-        android:name="com.test.itsavirustest.ui.notifications.NotificationsFragment"
+        android:name="com.test.itsavirustest.ui.account.AccountFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
