@@ -41,3 +41,11 @@ List of used library :
     implementation "com.google.android.gms:play-services-location:17.0.0"
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.google.android.libraries.places:places:2.3.0'
+    
+    
+
+Issue :
+-pick address from maps
+-chip
+-static data (rating, distance)
+-slow performance
