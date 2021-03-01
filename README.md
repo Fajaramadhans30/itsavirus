@@ -47,8 +47,8 @@ Application to order food around you easily and quickly
     
     
 
-Issue :
--pick address from maps
--chip
--static data (rating, distance)
--slow performance
+# Issue :
+pick address from maps
+chip
+static data (rating, distance)
+slow performance
