@@ -1,15 +1,12 @@
 # itsavirus
+Foodie App
+Application to order food around you easily and quickly
 
 # Screenshot
 <img src="https://user-images.githubusercontent.com/16092646/109510533-b4359d00-7ad4-11eb-8020-a9eb0ac98f68.png" width="200" height="400" /> <img src="https://user-images.githubusercontent.com/16092646/109511320-80a74280-7ad5-11eb-9734-3a4cf0dab7f0.png" width="200" height="400" /> <img src="https://user-images.githubusercontent.com/16092646/109511741-ee536e80-7ad5-11eb-96de-48c104519cfa.png" width="200" height="400" /> 
 
 
-
-
-Foodie App
-Application to order food around you easily and quickly
-
-List of used library :
+# List of used library :
 
     //architecture components
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
