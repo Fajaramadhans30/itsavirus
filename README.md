@@ -1,7 +1,7 @@
 # itsavirus
 
 # Screenshoot
-![Alt text](https://user-images.githubusercontent.com/16092646/109510533-b4359d00-7ad4-11eb-8020-a9eb0ac98f68.png "Optional title")
+![Alt text](https://user-images.githubusercontent.com/16092646/109510533-b4359d00-7ad4-11eb-8020-a9eb0ac98f68.png "Home" width="200" height="400")
 
 
 Foodie App
